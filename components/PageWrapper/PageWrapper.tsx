@@ -9,12 +9,10 @@ type PropsType = {
 export const PageWrapper = (props: PropsWithChildren<PropsType>) => {
   const { children, title } = props;
 
-  return (
-    <>
+  return<>
       <HeadMeta title={title} />
       <MainBlock>{children}</MainBlock>
     </>
-  );
 };
 
 const MainBlock = styled.div`
@@ -31,4 +29,4 @@ const MainBlock = styled.div`
   @media (max-width: 700px) {
     padding: 8rem 0 6rem;
   }
-`;
+`

@@ -3,7 +3,7 @@ import {ReactElement, ReactNode, useState} from 'react';
 import {NextPage} from 'next';
 import {QueryClient} from '@tanstack/query-core';
 import {Hydrate, QueryClientProvider} from '@tanstack/react-query';
-import {useLoader} from '../assets/hooks/useLoader';
+import {useLoader} from 'assets/hooks/useLoader';
 import '../styles/nprogress.css'
 
 export type NextPageWithLayout<P = {}> = NextPage<P> & {
@@ -21,7 +21,7 @@ export default function App({Component, pageProps}: AppPropsWithLayout) {
     return getLayout(
         <QueryClientProvider client={queryClient}>
             <Hydrate state={pageProps.dehydrateState}>
-                <Component {...pageProps} />);
+                <Component {...pageProps} />
             </Hydrate>
         </QueryClientProvider>)
 }

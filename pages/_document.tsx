@@ -32,8 +32,7 @@ class MyDocument extends Document {
     }
 
     render() {
-        return (
-            <Html>
+        return <Html>
                 <Head>
                     {
                         // @ts-ignore
@@ -45,7 +44,6 @@ class MyDocument extends Document {
                 <NextScript />
                 </body>
             </Html>
-        );
     }
 }
 
